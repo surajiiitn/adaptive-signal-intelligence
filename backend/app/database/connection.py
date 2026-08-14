@@ -22,3 +22,15 @@ def get_traffic_collection() -> Collection:
 
 def get_congestion_alert_collection() -> Collection:
     return get_database()["congestion_alerts"]
+
+
+def get_recommendation_collection() -> Collection:
+    return get_database()["traffic_recommendations"]
+
+
+def get_emergency_triage_collection() -> Collection:
+    return get_database()["emergency_triage"]
+
+
+def get_green_corridor_collection() -> Collection:
+    return get_database()["green_corridors"]

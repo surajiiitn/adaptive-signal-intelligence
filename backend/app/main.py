@@ -2,7 +2,15 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
-from app.routes import congestion_routes, density_routes, junction_routes, traffic_routes
+from app.routes import (
+    congestion_routes,
+    density_routes,
+    emergency_routes,
+    green_corridor_routes,
+    junction_routes,
+    recommendation_routes,
+    traffic_routes,
+)
 
 
 app = FastAPI(title=settings.app_name)
@@ -25,3 +33,6 @@ app.include_router(junction_routes.router, prefix=settings.api_v1_prefix)
 app.include_router(traffic_routes.router, prefix=settings.api_v1_prefix)
 app.include_router(density_routes.router, prefix=settings.api_v1_prefix)
 app.include_router(congestion_routes.router, prefix=settings.api_v1_prefix)
+app.include_router(recommendation_routes.router, prefix=settings.api_v1_prefix)
+app.include_router(emergency_routes.router, prefix=settings.api_v1_prefix)
+app.include_router(green_corridor_routes.router, prefix=settings.api_v1_prefix)
