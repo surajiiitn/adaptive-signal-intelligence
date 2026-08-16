@@ -19,8 +19,6 @@ dist/
 # env/
 
 # Environment files
-.env
-.env.*
 !.env.example
 
 # Logs
@@ -29,6 +27,7 @@ dist/
 # OS and editor files
 .DS_Store
 .idea/
-.vscode/
 
 readme.md
+config.bat
+node_modules
