@@ -34,3 +34,23 @@ def get_emergency_triage_collection() -> Collection:
 
 def get_green_corridor_collection() -> Collection:
     return get_database()["green_corridors"]
+
+
+def get_ambulance_route_collection() -> Collection:
+    return get_database()["ambulance_routes"]
+
+
+def get_roadside_display_collection() -> Collection:
+    return get_database()["roadside_displays"]
+
+
+def get_risk_pattern_collection() -> Collection:
+    return get_database()["risk_patterns"]
+
+
+def get_ml_traffic_frame_collection() -> Collection:
+    return get_database()["ml_traffic_frames"]
+
+
+def get_lane_correction_collection() -> Collection:
+    return get_database()["lane_corrections"]
